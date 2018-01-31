@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+
+</head>
+<style>
+		
+		/* body{background-color: #2D2D2D} */
+	</style>
+
+<body>
+<p>hollo word</p>
+</body>
+<script type="text/javascript" src="canvas-particle.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+    //配置
+    var config = {
+        vx: 4,//点x轴速度,正为右，负为左
+        vy:  4,//点y轴速度
+        height: 3,//点高宽，其实为正方形，所以不宜太大
+        width: 3,
+        count: 350,//点个数
+        color: "121, 162, 185",//点颜色
+        stroke: "130,255,255",//线条颜色
+        dist: 6000,//点吸附距离
+        e_dist: 10000,//鼠标吸附加速距离
+        max_conn: 10//点到点最大连接数
+    }
+    //调用
+    CanvasParticle(config);
+}
+</script>
+</html>
